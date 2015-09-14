@@ -1,0 +1,77 @@
+<templateSet group="orkz">
+  <template name="t1" value="$time1 = microtime(true);" description="Start Trace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="t2" value="Mage::log(&quot;$NAME$ : &quot; . ( microtime(true) - $time1 ));" description="End Trace and Log Time" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="__" value="&lt;?php echo $this-&gt;__('$END$'); ?&gt;" description="Translate" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="log" value="Mage::log($END$);" description="PHP Logg" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="php" value="&lt;?php $END$ ?&gt;" description="PHP code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="trace" value="Mage::log(Varien_Debug::backtrace(true, false));" description="Log Backtrace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="public" value="public function $FUNCTION$($PARAM$)&#10;{&#10;    $END$&#10;}" description="Public function" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCTION" expression="function" defaultValue="function" alwaysStopAt="false" />
+    <variable name="PARAM" expression="$param" defaultValue="$param" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
